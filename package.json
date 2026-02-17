@@ -1,0 +1,21 @@
+{
+  "name": "express-server",
+  "version": "1.0.0",
+  "description": "this an introduction  to express framework",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "server": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "author": "Moslem Ajra",
+  "license": "MIT",
+  "devDependencies": {
+    "nodemon": "^3.1.11"
+  },
+  "dependencies": {
+    "colors": "^1.4.0",
+    "dotenv": "^17.3.1",
+    "express": "^5.2.1"
+  }
+}
