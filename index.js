@@ -70,12 +70,19 @@ app.put("/api/courses/:id", (req, res) => {
   res.status(200).send(courses);
 });
 
+app.delete("/api/courses/:id", (req, res) => {
+  const { id } = req.params;
 
-app.delete("/api/courses/:id",  (req , res) => {
+  const course = courses.find((course) => course.id === +id);
 
+  if (!course) {
+    return res.status(404).send("Course not found");
+  }
 
+  courses = courses.filter((course) => course.id !== +id);
 
-})
+  res.status(200).send(courses);
+});
 
 app.listen(3000, () => {
   console.log("server is running on port 3000");
